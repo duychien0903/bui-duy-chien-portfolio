@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" fill="none">
+  <defs>
+    <linearGradient id="p3Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="cubeGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D2FF"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="360" rx="16" fill="url(#p3Grad)"/>
+  <rect x="1.5" y="1.5" width="597" height="357" rx="14.5" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Window Header -->
+  <rect x="0" y="0" width="600" height="42" rx="16" fill="#0B0F19"/>
+  <line x1="0" y1="42" x2="600" y2="42" stroke="#1E293B" stroke-width="1.5"/>
+  <circle cx="24" cy="21" r="5" fill="#EF4444"/>
+  <circle cx="42" cy="21" r="5" fill="#F59E0B"/>
+  <circle cx="60" cy="21" r="5" fill="#10B981"/>
+  <text x="300" y="26" text-anchor="middle" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600">game_engine_sandbox.cs — C# / 3D Coordinate Space</text>
+
+  <!-- 3D Perspective Grid Background -->
+  <g opacity="0.25">
+    <line x1="300" y1="180" x2="50" y2="300" stroke="#00D2FF" stroke-width="1"/>
+    <line x1="300" y1="180" x2="150" y2="300" stroke="#00D2FF" stroke-width="1"/>
+    <line x1="300" y1="180" x2="250" y2="300" stroke="#00D2FF" stroke-width="1"/>
+    <line x1="300" y1="180" x2="350" y2="300" stroke="#00D2FF" stroke-width="1"/>
+    <line x1="300" y1="180" x2="450" y2="300" stroke="#00D2FF" stroke-width="1"/>
+    <line x1="300" y1="180" x2="550" y2="300" stroke="#00D2FF" stroke-width="1"/>
+    <ellipse cx="300" cy="240" rx="220" ry="50" stroke="#3B82F6" stroke-width="1" stroke-dasharray="6 6"/>
+  </g>
+
+  <!-- 3D Isometric Wireframe Polyhedron / Cube in Center -->
+  <g transform="translate(300, 160)">
+    <!-- Top Face -->
+    <polygon points="0,-60 65,-25 0,10 -65,-25" fill="#1E293B" stroke="#00D2FF" stroke-width="2" opacity="0.8"/>
+    <!-- Right Face -->
+    <polygon points="0,10 65,-25 65,55 0,90" fill="#0F172A" stroke="#00D2FF" stroke-width="2" opacity="0.9"/>
+    <!-- Left Face -->
+    <polygon points="0,10 -65,-25 -65,55 0,90" fill="#162032" stroke="#3B82F6" stroke-width="2" opacity="0.9"/>
+
+    <!-- Coordinate Axes -->
+    <line x1="0" y1="10" x2="0" y2="-90" stroke="#EF4444" stroke-width="2.5"/>
+    <text x="8" y="-85" fill="#EF4444" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">Y (Up)</text>
+
+    <line x1="0" y1="10" x2="95" y2="30" stroke="#10B981" stroke-width="2.5"/>
+    <text x="100" y="35" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">X (Right)</text>
+
+    <line x1="0" y1="10" x2="-95" y2="30" stroke="#3B82F6" stroke-width="2.5"/>
+    <text x="-120" y="35" fill="#3B82F6" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">Z (Forward)</text>
+
+    <!-- Center Pivot Dot -->
+    <circle cx="0" cy="10" r="5" fill="#00D2FF"/>
+  </g>
+
+  <!-- Left Gamepad HUD -->
+  <g transform="translate(40, 75)">
+    <rect width="140" height="75" rx="8" fill="#0B1329" stroke="#1E293B" stroke-width="1"/>
+    <text x="14" y="24" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10">ENGINE &amp; LANG</text>
+    <text x="14" y="44" fill="#E2E8F0" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700">C# &amp; Unity Engine</text>
+    <text x="14" y="62" fill="#00D2FF" font-family="'JetBrains Mono', monospace" font-size="10">Shader &amp; Math 3D</text>
+
+    <rect y="90" width="140" height="75" rx="8" fill="#0B1329" stroke="#1E293B" stroke-width="1"/>
+    <text x="14" y="114" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10">CORE GOAL</text>
+    <text x="14" y="134" fill="#F59E0B" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">3D Gameplay Logic</text>
+    <text x="14" y="152" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10">Physics &amp; Rigidbody</text>
+  </g>
+
+  <!-- Right Progress Pipeline HUD -->
+  <g transform="translate(420, 75)">
+    <rect width="140" height="165" rx="8" fill="#0B1329" stroke="#1E293B" stroke-width="1"/>
+    <text x="12" y="24" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10">LEARNING ROADMAP</text>
+    
+    <text x="12" y="48" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="11">✓ C# OOP 基礎語法</text>
+    <text x="12" y="74" fill="#00D2FF" font-family="'JetBrains Mono', monospace" font-size="11">▶ 3D 向量與座標轉換</text>
+    <text x="12" y="100" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="11">○ 角色控制器與相機</text>
+    <text x="12" y="126" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="11">○ 碰撞偵測與狀態機</text>
+    <text x="12" y="152" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="11">○ Demo Prototype 產出</text>
+  </g>
+
+  <!-- Bottom Tag -->
+  <rect x="30" y="310" width="540" height="34" rx="8" fill="#0A111F" stroke="#1E293B" stroke-width="1"/>
+  <text x="45" y="331" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="11">PROJ-03: 3D 遊戲開發學習計畫 • 探索遊戲程式架構與物理模擬</text>
+  <text x="555" y="331" text-anchor="end" fill="#F59E0B" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">● 學習目標</text>
+</svg>

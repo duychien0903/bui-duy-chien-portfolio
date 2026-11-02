@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" fill="none">
+  <defs>
+    <linearGradient id="p2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="360" rx="16" fill="url(#p2Grad)"/>
+  <rect x="1.5" y="1.5" width="597" height="357" rx="14.5" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Browser Header -->
+  <rect x="0" y="0" width="600" height="42" rx="16" fill="#0B0F19"/>
+  <line x1="0" y1="42" x2="600" y2="42" stroke="#1E293B" stroke-width="1.5"/>
+  <circle cx="24" cy="21" r="5" fill="#EF4444"/>
+  <circle cx="42" cy="21" r="5" fill="#F59E0B"/>
+  <circle cx="60" cy="21" r="5" fill="#10B981"/>
+  <rect x="100" y="10" width="400" height="22" rx="6" fill="#1E293B"/>
+  <text x="300" y="25" text-anchor="middle" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="11">https://duychien0903.github.io/student-assignment-portfolio/</text>
+
+  <!-- Dashboard Content Layout -->
+  <!-- Header Bar -->
+  <rect x="30" y="60" width="540" height="40" rx="8" fill="#1E293B" opacity="0.6"/>
+  <text x="50" y="85" fill="#FFFFFF" font-family="'Noto Sans TC', sans-serif" font-size="13" font-weight="700">個人作業成果展示平台</text>
+  <text x="195" y="85" fill="#00D2FF" font-family="'JetBrains Mono', monospace" font-size="11">HWU • 1111310133 裴維戰</text>
+  <rect x="470" y="68" width="85" height="24" rx="12" fill="#2563EB"/>
+  <text x="512" y="84" text-anchor="middle" fill="#FFFFFF" font-family="'Noto Sans TC', sans-serif" font-size="11" font-weight="600">瀏覽作業</text>
+
+  <!-- Metric Badges -->
+  <g transform="translate(30, 115)">
+    <!-- Box 1 -->
+    <rect width="165" height="60" rx="8" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+    <text x="16" y="32" fill="#00D2FF" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="800">100%</text>
+    <text x="16" y="48" fill="#94A3B8" font-family="'Noto Sans TC', sans-serif" font-size="10">實作考核通過率</text>
+
+    <!-- Box 2 -->
+    <rect x="185" width="165" height="60" rx="8" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+    <text x="201" y="32" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="800">ALL PASS</text>
+    <text x="201" y="48" fill="#94A3B8" font-family="'Noto Sans TC', sans-serif" font-size="10">資料庫正規化 &amp; RWD</text>
+
+    <!-- Box 3 -->
+    <rect x="370" width="170" height="60" rx="8" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+    <text x="386" y="32" fill="#F59E0B" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="700">2026-10-18</text>
+    <text x="386" y="48" fill="#94A3B8" font-family="'Noto Sans TC', sans-serif" font-size="10">最近成果更新日</text>
+  </g>
+
+  <!-- Assignment Cards Simulation -->
+  <g transform="translate(30, 190)">
+    <!-- Card 1: MySQL -->
+    <rect width="255" height="105" rx="8" fill="#111827" stroke="#3B82F6" stroke-width="1.2"/>
+    <rect x="12" y="12" width="70" height="18" rx="9" fill="#1E3A8A"/>
+    <text x="47" y="25" text-anchor="middle" fill="#93C5FD" font-family="'Noto Sans TC', sans-serif" font-size="10" font-weight="600">資料庫系統</text>
+    <text x="12" y="48" fill="#FFFFFF" font-family="'Noto Sans TC', sans-serif" font-size="12" font-weight="700">MySQL 3NF 正規化與 JOIN 查詢</text>
+    <text x="12" y="68" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10">Tags: MySQL • SQL Workbench • ERD</text>
+    <rect x="12" y="78" width="60" height="18" rx="4" fill="#047857"/>
+    <text x="42" y="91" text-anchor="middle" fill="#ECFDF5" font-family="'Noto Sans TC', sans-serif" font-size="10">✓ 已完成</text>
+
+    <!-- Card 2: Web RWD -->
+    <rect x="280" width="260" height="105" rx="8" fill="#111827" stroke="#3B82F6" stroke-width="1.2"/>
+    <rect x="292" y="12" width="70" height="18" rx="9" fill="#1E3A8A"/>
+    <text x="327" y="25" text-anchor="middle" fill="#93C5FD" font-family="'Noto Sans TC', sans-serif" font-size="10" font-weight="600">網頁前端設計</text>
+    <text x="292" y="48" fill="#FFFFFF" font-family="'Noto Sans TC', sans-serif" font-size="12" font-weight="700">響應式網頁前端佈局與卡片排版</text>
+    <text x="292" y="68" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10">Tags: HTML5 • CSS3 • JavaScript</text>
+    <rect x="292" y="78" width="60" height="18" rx="4" fill="#047857"/>
+    <text x="322" y="91" text-anchor="middle" fill="#ECFDF5" font-family="'Noto Sans TC', sans-serif" font-size="10">✓ 已完成</text>
+  </g>
+
+  <!-- Bottom Tag -->
+  <rect x="30" y="310" width="540" height="34" rx="8" fill="#0A111F" stroke="#1E293B" stroke-width="1"/>
+  <text x="45" y="331" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="11">PROJ-02: 個人作業成果展示平台 • 支援即時搜尋與燈箱檢視</text>
+  <text x="555" y="331" text-anchor="end" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">● 已完成</text>
+</svg>

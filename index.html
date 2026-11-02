@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHIEN — 個人專業履歷與作品集 | 裴維戰 (BUI DUY CHIEN)</title>
+  <meta name="description" content="裴維戰 (BUI DUY CHIEN) 個人作品集與線上履歷。醒吾科技大學資訊科技應用系四年級，專注於現代網頁開發、C# 物件導向、電腦視覺 (OpenCV) 與 3D 遊戲開發。">
+  <meta name="keywords" content="裴維戰, BUI DUY CHIEN, 醒吾科技大學, 資訊科技應用系, 個人作品集, 履歷, 景碩科技實習, 網頁開發, C#, Python, OpenCV">
+  <meta name="author" content="裴維戰 (BUI DUY CHIEN)">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="CHIEN — 個人專業履歷與作品集 | 裴維戰">
+  <meta property="og:description" content="「我知道自己想要什麼，剩下的只是時間。」來自越南、在台灣學習資訊科技的學生，持續累積實務經驗。">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+
+  <!-- Google Fonts: JetBrains Mono & Noto Sans TC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Noto+Sans+TC:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. HEADER & NAVIGATION BAR
+       ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="返回首頁">
+        <div class="logo-symbol">
+          <span class="logo-bracket">[</span><span class="logo-char">C</span><span class="logo-bracket">]</span>
+        </div>
+        <div class="logo-text-group">
+          <span class="brand-name">CHIEN</span>
+          <span class="brand-sub">PORTFOLIO</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="主要導覽">
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">首頁</a></li>
+          <li><a href="#about" class="nav-link">關於我</a></li>
+          <li><a href="#personal-info" class="nav-link">個人資料</a></li>
+          <li><a href="#education" class="nav-link">學歷與經歷</a></li>
+          <li><a href="#skills" class="nav-link">專業技能</a></li>
+          <li><a href="#projects" class="nav-link">專案作品</a></li>
+          <li><a href="#goals" class="nav-link">職涯目標</a></li>
+          <li><a href="#contact" class="nav-link">聯絡方式</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <button type="button" class="btn btn-outline btn-sm" id="headerResumeBtn">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span>線上履歷</span>
+        </button>
+
+        <!-- Mobile Toggle Hamburger -->
+        <button type="button" class="mobile-toggle-btn" id="mobileToggleBtn" aria-label="切換選單" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <div class="mobile-drawer-inner">
+        <div class="drawer-header">
+          <div class="logo-symbol small">
+            <span class="logo-bracket">[</span><span class="logo-char">C</span><span class="logo-bracket">]</span>
+          </div>
+          <span class="drawer-title">導覽選單</span>
+          <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="關閉選單">&times;</button>
+        </div>
+
+        <ul class="drawer-menu">
+          <li><a href="#hero" class="drawer-link">01. 首頁 (Home)</a></li>
+          <li><a href="#about" class="drawer-link">02. 關於我 (About Me)</a></li>
+          <li><a href="#personal-info" class="drawer-link">03. 個人資料 (Profile)</a></li>
+          <li><a href="#education" class="drawer-link">04. 學歷與實習 (Education &amp; Work)</a></li>
+          <li><a href="#skills" class="drawer-link">05. 專業技能 (Skills)</a></li>
+          <li><a href="#projects" class="drawer-link">06. 專案作品 (Projects)</a></li>
+          <li><a href="#goals" class="drawer-link">07. 職涯目標 (Career Goals)</a></li>
+          <li><a href="#contact" class="drawer-link">08. 聯絡方式 (Contact)</a></li>
+        </ul>
+
+        <div class="drawer-cta-wrap">
+          <a href="./files/resume.html" target="_blank" class="btn btn-primary btn-block">檢視完整履歷 (Resume)</a>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+  </header>
+
+
+  <main id="mainContent">
+
+    <!-- =========================================================================
+         SECTION 1: HERO / GIỚI THIỆU
+         ========================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-glow"></div>
+      <div class="hero-grid-pattern"></div>
+
+      <div class="container hero-container">
+        
+        <!-- Left: Statement & Bio -->
+        <div class="hero-text-content">
+          
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span class="code-font">IT APPLICATION STUDENT | ASPIRING DEVELOPER</span>
+          </div>
+
+          <div class="hero-names-wrap">
+            <span class="hero-brand-callout">CHIEN</span>
+            <h1 class="hero-main-name">
+              BUI DUY CHIEN <span class="name-zh">/ 裴維戰</span>
+            </h1>
+          </div>
+
+          <!-- Highlighted Quote -->
+          <div class="hero-quote-box">
+            <div class="quote-symbol">“</div>
+            <p class="quote-text-zh">「我知道自己想要什麼，剩下的只是時間。」</p>
+            <p class="quote-text-vi">“Tôi biết mình muốn gì. Phần còn lại chỉ là thời gian.”</p>
+          </div>
+
+          <!-- Description -->
+          <div class="hero-desc-box">
+            <p class="desc-zh">
+              「一名來自越南、在台灣學習資訊科技的學生，持續累積實務經驗，探索程式設計與遊戲開發，並朝自己的目標前進。」
+            </p>
+            <p class="desc-vi">
+              Một sinh viên Việt Nam đang học Công nghệ thông tin tại Đài Loan, tích lũy kinh nghiệm thực tế, khám phá lập trình và phát triển game, đồng thời từng bước tiến tới mục tiêu của mình.
+            </p>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="hero-actions-row">
+            <a href="#personal-info" class="btn btn-primary btn-lg">
+              <span>VIEW MY PROFILE</span>
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#about" class="btn btn-secondary btn-lg">
+              <span>EXPLORE MY JOURNEY</span>
+            </a>
+          </div>
+
+          <!-- Quick Meta Stats Bar -->
+          <div class="hero-quick-meta">
+            <div class="meta-item">
+              <span class="meta-label">學校系所</span>
+              <strong class="meta-val">醒吾科技大學 • 資訊科技應用系</strong>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-item">
+              <span class="meta-label">就讀年級</span>
+              <strong class="meta-val code-font text-cyan">大學四年級 (Senior)</strong>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-item">
+              <span class="meta-label">實習經歷</span>
+              <strong class="meta-val">景碩科技 (Kinsus) 實習生</strong>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Modern Tech Portrait Frame -->
+        <div class="hero-visual-content">
+          <div class="portrait-card-wrapper">
+            <div class="corner-bracket top-left"></div>
+            <div class="corner-bracket top-right"></div>
+            <div class="corner-bracket bottom-left"></div>
+            <div class="corner-bracket bottom-right"></div>
+
+            <div class="portrait-inner">
+              <img src="./images/profile/avatar.svg" alt="裴維戰 (BUI DUY CHIEN) 個人數位頭像" width="400" height="480" class="portrait-img">
+            </div>
+
+            <div class="portrait-caption-tag">
+              <span class="pulse-indicator"></span>
+              <span class="caption-text">SYSTEM ONLINE • TAIWAN / VIETNAM</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 2: ABOUT ME / 關於我
+         ========================================================================= -->
+    <section class="section-padding about-section" id="about">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag-row">
+            <span class="section-num code-font">02</span>
+            <span class="section-tag">ABOUT ME</span>
+          </div>
+          <h2 class="section-title">不只是學習，而是不斷成長。</h2>
+          <p class="section-subtitle">
+            跨越地域與語言的藩籬，在台灣的高等教育與半導體載板製造環境中，鍛鍊出具備韌性與執行力的資訊科技素養。
+          </p>
+        </div>
+
+        <div class="about-grid-content">
+          
+          <!-- Left: Narrative Text -->
+          <div class="about-story-col">
+            <div class="story-paragraph">
+              <p>
+                我是一名來自越南、目前於台灣醒吾科技大學就讀「資訊科技應用系」的大四學生。在異地求學的這幾年中，我不僅掌握了繁體中文的日常生活與職場溝通能力，更將專注力投注於資訊科技與軟體實務的核心領域。
+              </p>
+            </div>
+
+            <div class="story-paragraph">
+              <p>
+                我的主要興趣涵蓋電腦程式設計、現代網頁全端架構、電腦視覺 (Computer Vision) 以及 3D 遊戲開發。對我而言，學習程式語言不僅僅是為了應付課堂作業，而是為了親手打造出能夠真正運作、具備實質價值的數位產品。
+              </p>
+            </div>
+
+            <div class="story-paragraph">
+              <p>
+                在課堂理論之外，我也透過景碩科技 (Kinsus) 的企業現場實習累積了珍貴的團隊協作與工業製程經驗。我深信<strong>『紮實的實作是最好的學習捷徑』</strong>，並期許自己持續保持謙遜與求知慾，在科技領域扎根成長。
+              </p>
+            </div>
+
+            <div class="about-quote-pill">
+              <span class="pill-icon">💡</span>
+              <span class="pill-text">實踐導向 • 重視細節 • 勇於面對未知技術挑戰</span>
+            </div>
+          </div>
+
+          <!-- Right: Visual Feature Cards -->
+          <div class="about-highlights-col">
+            
+            <div class="highlight-feature-card">
+              <div class="hf-icon-box">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <div class="hf-content">
+                <h3 class="hf-title">在台求學背景</h3>
+                <p class="hf-desc">醒吾科技大學 資訊科技應用系，主修軟體開發、資料庫設計與網路應用。</p>
+              </div>
+            </div>
+
+            <div class="highlight-feature-card">
+              <div class="hf-icon-box">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <div class="hf-content">
+                <h3 class="hf-title">多語言交流能力</h3>
+                <p class="hf-desc">越南語 (母語)、繁體中文 (日常溝通與職場指示無礙)、英語 (技術手冊與代碼閱讀)。</p>
+              </div>
+            </div>
+
+            <div class="highlight-feature-card">
+              <div class="hf-icon-box">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <div class="hf-content">
+                <h3 class="hf-title">程式與遊戲開發熱忱</h3>
+                <p class="hf-desc">專注於 C# 物件導向架構、3D 遊戲引擎邏輯、Python 影像處理與純前端互動。</p>
+              </div>
+            </div>
+
+            <div class="highlight-feature-card">
+              <div class="hf-icon-box">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="8.5" cy="7.5" r="4"></circle>
+                  <line x1="20" y1="8" x2="20" y2="14"></line>
+                  <line x1="23" y1="11" x2="17" y2="11"></line>
+                </svg>
+              </div>
+              <div class="hf-content">
+                <h3 class="hf-title">嚴謹職場工作態度</h3>
+                <p class="hf-desc">具備景碩科技製造現場實務經歷，遵循無塵室嚴格 SOP，守時負責並具備跨單位機動支援韌性。</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 3: PERSONAL INFORMATION / 個人資料
+         ========================================================================= -->
+    <section class="section-padding bg-surface" id="personal-info">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-tag-row center">
+            <span class="section-num code-font">03</span>
+            <span class="section-tag">PERSONAL PROFILE</span>
+          </div>
+          <h2 class="section-title">個人檔案與基本資料</h2>
+          <p class="section-subtitle">
+            公開透明、格式嚴謹的專業履歷摘要，不揭露地址或身分證號等隱私，聚焦於學術身分與專業能力。
+          </p>
+        </div>
+
+        <div class="profile-cards-grid">
+          
+          <!-- Card 1: 姓名 -->
+          <div class="profile-meta-card">
+            <div class="pmc-header">
+              <span class="pmc-label">姓名 (FULL NAME)</span>
+              <span class="pmc-icon">👤</span>
+            </div>
+            <div class="pmc-main-val">裴維戰</div>
+            <div class="pmc-sub-val code-font text-cyan">BUI DUY CHIEN</div>
+          </div>
+
+          <!-- Card 2: 國籍 -->
+          <div class="profile-meta-card">
+            <div class="pmc-header">
+              <span class="pmc-label">國籍 (NATIONALITY)</span>
+              <span class="pmc-icon">🇻🇳</span>
+            </div>
+            <div class="pmc-main-val">越南 (Vietnam)</div>
+            <div class="pmc-sub-val text-muted">目前在台灣就學與實習</div>
+          </div>
+
+          <!-- Card 3: 出生日期 -->
+          <div class="profile-meta-card">
+            <div class="pmc-header">
+              <span class="pmc-label">出生日期 (DATE OF BIRTH)</span>
+              <span class="pmc-icon">📅</span>
+            </div>
+            <div class="pmc-main-val code-font">2004 / 12 / 17</div>
+            <div class="pmc-sub-val text-muted">青年世代 • 充滿學習動力</div>
+          </div>
+
+          <!-- Card 4: 就讀學校 -->
+          <div class="profile-meta-card">
+            <div class="pmc-header">
+              <span class="pmc-label">就讀大專院校 (UNIVERSITY)</span>
+              <span class="pmc-icon">🏛️</span>
+            </div>
+            <div class="pmc-main-val">醒吾科技大學</div>
+            <div class="pmc-sub-val text-muted">Hsing Wu University (HWU)</div>
+          </div>
+
+          <!-- Card 5: 科系與領域 -->
+          <div class="profile-meta-card">
+            <div class="pmc-header">
+              <span class="pmc-label">修習系所 (DEPARTMENT)</span>
+              <span class="pmc-icon">💻</span>
+            </div>
+            <div class="pmc-main-val">資訊科技應用系</div>
+            <div class="pmc-sub-val text-muted">Applied Information Technology</div>
+          </div>
+
+          <!-- Card 6: 學歷年級狀態 -->
+          <div class="profile-meta-card">
+            <div class="pmc-header">
+              <span class="pmc-label">學歷狀態 (ACADEMIC LEVEL)</span>
+              <span class="pmc-icon">🎓</span>
+            </div>
+            <div class="pmc-main-val text-success">大學四年級 (在學中)</div>
+            <div class="pmc-sub-val text-muted">依實際就學進度同步更新</div>
+          </div>
+
+        </div>
+
+        <!-- Language Proficiency Bar (Honest, No fake percentages) -->
+        <div class="language-section-box">
+          <h3 class="box-inner-title">
+            <span class="code-font text-cyan">LANGUAGES</span> 語言溝通能力（真實陳述，不使用虛假百分比）
+          </h3>
+          
+          <div class="language-cards-row">
+            <div class="lang-item-card">
+              <div class="lang-top">
+                <strong class="lang-name">越南語 (Tiếng Việt)</strong>
+                <span class="lang-badge native">母語 (Native)</span>
+              </div>
+              <p class="lang-desc">母語能力，具備完整流暢的日常表達、專業寫作與深度思維溝通。</p>
+            </div>
+
+            <div class="lang-item-card">
+              <div class="lang-top">
+                <strong class="lang-name">繁體中文 (Traditional Chinese)</strong>
+                <span class="lang-badge applied">在台求學與職場通用</span>
+              </div>
+              <p class="lang-desc">熟練理解台灣大專授課內容、專業教材，能流暢執行實習主管現場工作指派與溝通協調。</p>
+            </div>
+
+            <div class="lang-item-card">
+              <div class="lang-top">
+                <strong class="lang-name">英語 (English)</strong>
+                <span class="lang-badge tech">技術閱讀與文檔應用</span>
+              </div>
+              <p class="lang-desc">能無礙閱讀軟體官方開發文件 (API Docs)、GitHub Issue 與程式碼架構規範。</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 4 & 5: EDUCATION & WORK EXPERIENCE / 學歷背景與工作經歷
+         ========================================================================= -->
+    <section class="section-padding" id="education">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag-row">
+            <span class="section-num code-font">04</span>
+            <span class="section-tag">EDUCATION &amp; EXPERIENCE</span>
+          </div>
+          <h2 class="section-title">學歷背景與實務經歷</h2>
+          <p class="section-subtitle">
+            「從實務中累積經驗。」結合課堂專業理論與製造工廠現場實習，實事求是，絕不誇大職權。
+          </p>
+        </div>
+
+        <div class="timeline-dual-grid">
+          
+          <!-- Column A: Education -->
+          <div class="timeline-column">
+            <h3 class="column-heading">
+              <span class="col-icon">🎓</span> 學歷背景 (Education)
+            </h3>
+
+            <div class="timeline-wrap">
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-card">
+                  <div class="timeline-date-row">
+                    <span class="timeline-date code-font">2023 - 至今 (在學中)</span>
+                    <span class="status-pill in-school">大學四年級</span>
+                  </div>
+                  <h4 class="timeline-title">醒吾科技大學 (Hsing Wu University)</h4>
+                  <div class="timeline-sub">學士學位在學 • 資訊科技應用系</div>
+                  <p class="timeline-desc">
+                    系統性學習電腦軟體開發、資料庫正規化設計、網路協定與程式實作。在學期間嚴謹記錄每日作業與實驗，並自主發布至個人成果平台。
+                  </p>
+                  
+                  <div class="coursework-box">
+                    <span class="cw-title">主要修習專業科目：</span>
+                    <ul class="cw-list">
+                      <li>物件導向程式設計 (C# / Python)</li>
+                      <li>資料庫系統與應用 (MySQL / 3NF 正規化與 JOIN 查詢)</li>
+                      <li>網頁前端設計與應用 (語意化 HTML5 / CSS3 / JavaScript 原生架構)</li>
+                      <li>電腦網路與通訊基礎</li>
+                    </ul>
+                  </div>
+
+                  <div class="cert-placeholder-tag">
+                    <span>📌 專業證照與專題競賽：陸續實施與更新中</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column B: Work Experience -->
+          <div class="timeline-column">
+            <h3 class="column-heading">
+              <span class="col-icon">🏭</span> 工作與實習經歷 (Work Experience)
+            </h3>
+
+            <div class="timeline-wrap">
+              <div class="timeline-item">
+                <div class="timeline-marker cyan"></div>
+                <div class="timeline-card">
+                  <div class="timeline-date-row">
+                    <span class="timeline-date code-font text-cyan">實習在職期間</span>
+                    <span class="status-pill intern">企業現場實習生</span>
+                  </div>
+                  <h4 class="timeline-title">景碩科技股份有限公司 (Kinsus)</h4>
+                  <div class="timeline-sub">生產製造與製程相關部門 • Plasma (電漿表面處理) 核心工段</div>
+                  
+                  <div class="experience-duties-box">
+                    <p class="exp-intro">
+                      於半導體載板專業製造大廠進行實務實習，接受無塵室工業安全規範洗禮：
+                    </p>
+                    <ul class="duties-list">
+                      <li><strong>遵循無塵室 SOP：</strong>嚴格落實無塵衣穿戴、靜電防護與機台上下料標準流程，維持極高生產良率。</li>
+                      <li><strong>Plasma 部門實務作業：</strong>負責電漿機台定時進出料、監控關鍵製程參數，在第一時間通報工程師排除操作異常。</li>
+                      <li><strong>跨單位機動支援：</strong>具備高度團隊配合度，當其他製程區域面臨人力吃緊時，積極配合主管調度跨區協助。</li>
+                      <li><strong>培養責任感與細心度：</strong>在高標準、快節奏的製造現場中，深刻體會團隊溝通與細節管理之重要性。</li>
+                    </ul>
+                  </div>
+
+                  <div class="exp-badge-row">
+                    <span class="exp-tag">無塵室 SOP</span>
+                    <span class="exp-tag">Plasma 製程</span>
+                    <span class="exp-tag">團隊協作</span>
+                    <span class="exp-tag">跨部門機動支援</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 6: SKILLS / 專業技能
+         ========================================================================= -->
+    <section class="section-padding bg-surface" id="skills">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-tag-row center">
+            <span class="section-num code-font">05</span>
+            <span class="section-tag">SKILLS &amp; STACK</span>
+          </div>
+          <h2 class="section-title">專業技能與技術探索</h2>
+          <p class="section-subtitle">
+            不使用虛假百分比進度條。誠實標註目前學習與掌握狀態（「學習中」、「熟練應用」、「實作應用」）。
+          </p>
+        </div>
+
+        <div class="skills-categories-grid">
+          
+          <!-- Category 1: Programming -->
+          <div class="skill-category-box">
+            <div class="sc-header">
+              <div class="sc-icon">⚡</div>
+              <div>
+                <h3 class="sc-title">Programming (程式語言)</h3>
+                <span class="sc-sub">核心語法邏輯與物件導向實務</span>
+              </div>
+            </div>
+
+            <div class="sc-items-list">
+              
+              <div class="skill-card-row">
+                <div class="scr-top">
+                  <strong class="skill-name code-font">C#</strong>
+                  <span class="skill-state learning">學習中</span>
+                </div>
+                <p class="skill-detail">類別封裝、物件導向原則、介面繼承與 Unity 遊戲腳本控制邏輯。</p>
+              </div>
+
+              <div class="skill-card-row">
+                <div class="scr-top">
+                  <strong class="skill-name code-font">HTML5 / CSS3</strong>
+                  <span class="skill-state proficient">熟練應用</span>
+                </div>
+                <p class="skill-detail">現代語意化排版、CSS Grid / Flexbox 網格佈局、Mobile-First 響應式斷點。</p>
+              </div>
+
+              <div class="skill-card-row">
+                <div class="scr-top">
+                  <strong class="skill-name code-font">JavaScript (ES6+)</strong>
+                  <span class="skill-state applied">實作應用</span>
+                </div>
+                <p class="skill-detail">DOM 事件監聽、原生資料篩選引擎、Modal/Lightbox 彈窗狀態控制。</p>
+              </div>
+
+              <div class="skill-card-row">
+                <div class="scr-top">
+                  <strong class="skill-name code-font">Python</strong>
+                  <span class="skill-state learning">學習中</span>
+                </div>
+                <p class="skill-detail">基礎語法練習、檔案與資料處理、OpenCV 電腦視覺函式庫串接。</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Category 2: Development Interests -->
+          <div class="skill-category-box">
+            <div class="sc-header">
+              <div class="sc-icon">🎮</div>
+              <div>
+                <h3 class="sc-title">Development Interests (探索領域)</h3>
+                <span class="sc-sub">長期聚焦之核心技術方向與目標</span>
+              </div>
+            </div>
+
+            <div class="sc-items-list">
+              
+              <div class="skill-card-row">
+                <div class="scr-top">
+                  <strong class="skill-name code-font">Game Development</strong>
+                  <span class="skill-state target">核心目標</span>
+                </div>
+                <p class="skill-detail">探索 3D 空間數學、物理碰撞模擬、有限狀態機 (FSM) 與遊戲關卡設計。</p>
+              </div>
+
+              <div class="skill-card-row">
+                <div class="scr-top">
+                  <strong class="skill-name code-font">Web Development</strong>
+                  <span class="skill-state applied">持續實作</span>
+                </div>
+                <p class="skill-detail">輕量級高效能個人作品集平台、純原生無依賴部署、 Neocities / GitHub Pages。</p>
+              </div>
+
+              <div class="skill-card-row">
+                <div class="scr-top">
+                  <strong class="skill-name code-font">Computer Vision</strong>
+                  <span class="skill-state learning">專案探索</span>
+                </div>
+                <p class="skill-detail">運用 OpenCV 進行即時視訊串流分析、灰階處理、特徵比對與人臉定位標記。</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Category 3: Tools & Environment -->
+          <div class="skill-category-box">
+            <div class="sc-header">
+              <div class="sc-icon">🛠️</div>
+              <div>
+                <h3 class="sc-title">Tools &amp; Environment (工具環境)</h3>
+                <span class="sc-sub">日常開發、協作與版本控制工具鏈</span>
+              </div>
+            </div>
+
+            <div class="sc-items-list">
+              
+              <div class="skill-card-row">
+                <div class="scr-top">
+                  <strong class="skill-name code-font">Visual Studio Code</strong>
+                  <span class="skill-state proficient">主要 IDE</span>
+                </div>
+                <p class="skill-detail">高度客製化開發環境、Live Server 實時預覽、前端與 Python 斷點除錯。</p>
+              </div>
+
+              <div class="skill-card-row">
+                <div class="scr-top">
+                  <strong class="skill-name code-font">Git / GitHub</strong>
+                  <span class="skill-state applied">版本控制</span>
+                </div>
+                <p class="skill-detail">Git CLI 常用指令、分支管理、Commit 規範維護與 GitHub Pages 線上發布。</p>
+              </div>
+
+              <div class="skill-card-row">
+                <div class="scr-top">
+                  <strong class="skill-name code-font">OpenCV (cv2)</strong>
+                  <span class="skill-state learning">學習中</span>
+                </div>
+                <p class="skill-detail">調用 CascadeClassifier、繪製邊界框標籤與影像預處理流程。</p>
+              </div>
+
+              <div class="skill-card-row">
+                <div class="scr-top">
+                  <strong class="skill-name code-font">MySQL Workbench</strong>
+                  <span class="skill-state applied">課堂實務</span>
+                </div>
+                <p class="skill-detail">關聯式資料庫設計、3NF 正規化規劃、ER Diagram 繪製與多表 JOIN 查詢。</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 7: PROJECTS / 專案作品
+         ========================================================================= -->
+    <section class="section-padding" id="projects">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag-row">
+            <span class="section-num code-font">06</span>
+            <span class="section-tag">FEATURED PROJECTS</span>
+          </div>
+          <h2 class="section-title">實作專案與學習紀錄</h2>
+          <p class="section-subtitle">
+            真實呈現學習足跡。每個專案均如實標註狀態，不誇大已完成項目，提供完整截圖與原始碼檢視連結。
+          </p>
+        </div>
+
+        <div class="projects-grid" id="projectsGridContainer">
+          
+          <!-- Project Card 1: OpenCV -->
+          <article class="project-card">
+            <div class="pc-preview-wrap">
+              <img src="./images/projects/opencv.svg" alt="OpenCV 人臉偵測專案展示圖" loading="lazy">
+              <div class="pc-badge-overlay">
+                <span class="status-badge learning">● 學習中</span>
+              </div>
+            </div>
+
+            <div class="pc-body">
+              <div class="pc-category-tag code-font">COMPUTER VISION • PYTHON</div>
+              <h3 class="pc-title">OpenCV 人臉偵測與辨識技術學習紀錄</h3>
+              <p class="pc-desc">
+                運用 Python 與 OpenCV 開源電腦視覺函式庫，實作即時網路攝影機 (Webcam) 視訊串流之人臉捕捉、特徵點標記與座標繪製。探索影像灰階處理、高斯降噪與 Haar Cascade 分類器之底層原理。
+              </p>
+
+              <div class="pc-tech-tags">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">OpenCV</span>
+                <span class="tech-pill">Haar Cascade</span>
+                <span class="tech-pill">Webcam Stream</span>
+              </div>
+
+              <div class="pc-footer">
+                <button type="button" class="btn btn-outline btn-sm btn-open-project" data-proj="proj-opencv">
+                  <span>查看專案詳情</span>
+                  <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 8h10M9 4l4 4-4 4"/>
+                  </svg>
+                </button>
+                <a href="https://github.com/duychien0903" target="_blank" rel="noopener" class="pc-github-link" aria-label="查看 GitHub">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 2: Assignment Portfolio -->
+          <article class="project-card featured">
+            <div class="pc-preview-wrap">
+              <img src="./images/projects/assignment-platform.svg" alt="個人作業成果展示平台展示圖" loading="lazy">
+              <div class="pc-badge-overlay">
+                <span class="status-badge completed">✓ 已完成 • 上線中</span>
+              </div>
+            </div>
+
+            <div class="pc-body">
+              <div class="pc-category-tag code-font text-cyan">WEB APPLICATION • FRONT-END</div>
+              <h3 class="pc-title">大專院校個人作業成果展示平台</h3>
+              <p class="pc-desc">
+                專為大學日常課程打造之成果呈報網站。採『數據與介面解耦』純原生 HTML5/CSS3/JavaScript 架構，具備即時搜尋、課程領域分類、作業詳情 Modal 與佐證截圖 Lightbox 檢視。
+              </p>
+
+              <div class="pc-tech-tags">
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3 / Grid</span>
+                <span class="tech-pill">Vanilla JS</span>
+                <span class="tech-pill">GitHub Pages</span>
+              </div>
+
+              <div class="pc-footer">
+                <a href="https://duychien0903.github.io/student-assignment-portfolio/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                  <span>開啟線上平台</span>
+                  <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 8h10M9 4l4 4-4 4"/>
+                  </svg>
+                </a>
+                <a href="https://github.com/duychien0903/student-assignment-portfolio" target="_blank" rel="noopener" class="pc-github-link" aria-label="查看 GitHub 原始碼">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 3: 3D Game Dev -->
+          <article class="project-card">
+            <div class="pc-preview-wrap">
+              <img src="./images/projects/game-dev.svg" alt="3D 遊戲開發學習計畫概念圖" loading="lazy">
+              <div class="pc-badge-overlay">
+                <span class="status-badge target">● 學習中的個人目標</span>
+              </div>
+            </div>
+
+            <div class="pc-body">
+              <div class="pc-category-tag code-font">GAME DEVELOPMENT • C#</div>
+              <h3 class="pc-title">3D 遊戲開發學習計畫與物理架構探索</h3>
+              <p class="pc-desc">
+                結合 C# 物件導向程式設計，探索 3D 空間座標系、向量運算（內積/外積）、剛體碰撞 (Rigidbody) 與攝影機視角跟隨演算法。目標在畢業前完成第一款 3D 原型展示 Demo。
+              </p>
+
+              <div class="pc-tech-tags">
+                <span class="tech-pill">C#</span>
+                <span class="tech-pill">Unity 3D</span>
+                <span class="tech-pill">3D Vectors</span>
+                <span class="tech-pill">Physics</span>
+              </div>
+
+              <div class="pc-footer">
+                <button type="button" class="btn btn-outline btn-sm btn-open-project" data-proj="proj-game-plan">
+                  <span>查看學習計畫詳情</span>
+                  <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 8h10M9 4l4 4-4 4"/>
+                  </svg>
+                </button>
+                <a href="https://github.com/duychien0903" target="_blank" rel="noopener" class="pc-github-link" aria-label="查看 GitHub">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 8: CAREER GOALS / 職涯目標
+         ========================================================================= -->
+    <section class="section-padding bg-surface" id="goals">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-tag-row center">
+            <span class="section-num code-font">07</span>
+            <span class="section-tag">CAREER ROADMAP</span>
+          </div>
+          <h2 class="section-title">把目標變成實力。</h2>
+          <p class="section-subtitle">
+            明確的願景，拆解為踏實的每日積累。以務實謙遜的步伐，向專業軟體工程師之路邁進。
+          </p>
+        </div>
+
+        <div class="goals-timeline-grid">
+          
+          <div class="goal-step-card">
+            <div class="goal-num code-font">01</div>
+            <h3 class="goal-title">紮實深耕程式邏輯</h3>
+            <p class="goal-desc">持續精進 C#、Python 與 JavaScript 核心語法，重視資料結構、演算法複雜度與乾淨代碼 (Clean Code) 實踐。</p>
+          </div>
+
+          <div class="goal-step-card">
+            <div class="goal-num code-font">02</div>
+            <h3 class="goal-title">累積具實質價值作品</h3>
+            <p class="goal-desc">拒絕空洞理論，每一學期堅持產出具備完整 GitHub 原始碼、清晰技術文檔與可線上預覽之實質成果。</p>
+          </div>
+
+          <div class="goal-step-card">
+            <div class="goal-num code-font">03</div>
+            <h3 class="goal-title">掌握軟體開發完整流程</h3>
+            <p class="goal-desc">從需求分析、資料庫建模、版本控制到自動化部署，逐步熟悉軟體工程團隊之標準開發生命週期。</p>
+          </div>
+
+          <div class="goal-step-card">
+            <div class="goal-num code-font">04</div>
+            <h3 class="goal-title">發揮跨文化職場競爭力</h3>
+            <p class="goal-desc">將在台求學與景碩科技實習所鍛鍊之抗壓性、細心負責與多語言溝通素養，轉化為科技職場的核心優勢。</p>
+          </div>
+
+          <div class="goal-step-card">
+            <div class="goal-num code-font">05</div>
+            <h3 class="goal-title">邁向全方位軟體工程師</h3>
+            <p class="goal-desc">做好萬全準備迎接畢業後的科技業實習與工程師職位，將每一次投入化為實際解決問題的工程能力。</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 9: RESUME DOWNLOAD / 履歷下載
+         ========================================================================= -->
+    <section class="section-padding resume-cta-section" id="resume">
+      <div class="container">
+        
+        <div class="resume-cta-banner">
+          <div class="resume-cta-content">
+            <span class="badge-dot-static">● ONLINE CURRICULUM VITAE</span>
+            <h2 class="resume-banner-title">專業履歷表 (Curriculum Vitae)</h2>
+            <p class="resume-banner-desc">
+              提供即時瀏覽之標準 A4 格式線上履歷，包含個人基本資訊、在台學歷背景、景碩科技實習經歷、專業技能與實作作品摘要。適合實習申請、工程師職缺應聘與學術查閱。
+            </p>
+
+            <div class="resume-btn-group">
+              <button type="button" class="btn btn-primary btn-lg" id="openResumeModalBtn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <span>VIEW RESUME (線上預覽)</span>
+              </button>
+
+              <a href="./files/resume.html" target="_blank" class="btn btn-secondary btn-lg" id="downloadPdfBtn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>DOWNLOAD CV PDF (另存為 PDF)</span>
+              </a>
+            </div>
+
+            <div class="resume-spec-note">
+              <span>✓ 點擊「DOWNLOAD CV PDF」將開啟列印檢視頁面，直接支援瀏覽器「另存為 PDF (Save as PDF)」功能，排版經過無損 A4 最佳化。</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 10: CONTACT / 聯絡方式
+         ========================================================================= -->
+    <section class="section-padding" id="contact">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-tag-row center">
+            <span class="section-num code-font">08</span>
+            <span class="section-tag">GET IN TOUCH</span>
+          </div>
+          <h2 class="section-title">聯絡方式與社交連結</h2>
+          <p class="section-subtitle">
+            歡迎隨時透過電子信箱、GitHub 或作品集站點與我交流，探討技術實作與工作實習機會。
+          </p>
+        </div>
+
+        <div class="contact-links-grid">
+          
+          <!-- Email -->
+          <div class="contact-card">
+            <div class="cc-icon-wrap">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="cc-label">電子信箱 (EMAIL)</div>
+            <div class="cc-val code-font" id="displayEmail">duychien17122004@gmail.com</div>
+            <div class="cc-action">
+              <button type="button" class="btn btn-outline btn-sm" id="copyEmailBtn">複製信箱地址</button>
+            </div>
+          </div>
+
+          <!-- GitHub -->
+          <a href="https://github.com/duychien0903" target="_blank" rel="noopener" class="contact-card link-card">
+            <div class="cc-icon-wrap">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </div>
+            <div class="cc-label">GITHUB 主頁</div>
+            <div class="cc-val code-font text-cyan">github.com/duychien0903</div>
+            <span class="cc-hint">點擊前往原始碼倉庫 ↗</span>
+          </a>
+
+          <!-- Neocities / Assignment Platform -->
+          <a href="https://duychien0903.github.io/student-assignment-portfolio/" target="_blank" rel="noopener" class="contact-card link-card">
+            <div class="cc-icon-wrap">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <div class="cc-label">作業成果展示站點</div>
+            <div class="cc-val code-font text-cyan">student-assignment-portfolio</div>
+            <span class="cc-hint">點擊查閱歷次作業與佐證截圖 ↗</span>
+          </a>
+
+          <!-- Neocities Public Web -->
+          <a href="https://hwu1111310133.neocities.org" target="_blank" rel="noopener" class="contact-card link-card">
+            <div class="cc-icon-wrap">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <div class="cc-label">NEOCITIES 個人站點</div>
+            <div class="cc-val code-font text-cyan">hwu1111310133.neocities.org</div>
+            <span class="cc-hint">點擊瀏覽學生公開主頁 ↗</span>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================================
+       SECTION 11: FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-left">
+        <div class="footer-brand">
+          <span class="fb-title">CHIEN — PERSONAL PORTFOLIO</span>
+          <span class="fb-sub">裴維戰 (BUI DUY CHIEN) 個人專業作品集</span>
+        </div>
+        <p class="footer-motto">「持續學習，持續成長。」</p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-meta-line">
+          <span>醒吾科技大學 • 資訊科技應用系</span>
+          <span class="dot">•</span>
+          <span>學號：1111310133</span>
+        </div>
+        <p class="footer-copyright">
+          © <span id="copyrightYear">2026</span> BUI DUY CHIEN (裴維戰). ALL RIGHTS RESERVED.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- =========================================================================
+       MODAL: ONLINE RESUME PREVIEW MODAL (線上預覽 CV 彈窗)
+       ========================================================================= -->
+  <div class="modal-backdrop" id="resumeModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+    <div class="modal-dialog resume-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <div class="modal-header-info">
+            <span class="code-font text-cyan">CURRICULUM VITAE</span>
+            <h2 class="modal-title" id="resumeModalTitle">裴維戰 (BUI DUY CHIEN) — 個人履歷表</h2>
+          </div>
+          
+          <div class="modal-header-actions">
+            <a href="./files/resume.html" target="_blank" class="btn btn-outline btn-sm">另開列印頁面 ↗</a>
+            <button type="button" class="modal-close-btn" id="resumeModalCloseBtn" aria-label="關閉視窗">&times;</button>
+          </div>
+        </div>
+
+        <div class="modal-body resume-body">
+          <iframe src="./files/resume.html" title="線上履歷預覽" class="resume-iframe"></iframe>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="resumeModalDismissBtn">關閉預覽</button>
+          <a href="./files/resume.html" target="_blank" class="btn btn-primary">另存為 PDF / 列印履歷</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+         PROJECT DETAIL MODAL (專案詳細內容彈窗)
+       ========================================================================= -->
+  <div class="modal-backdrop" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="projModalTitle">
+    <div class="modal-dialog project-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <div class="modal-header-info">
+            <span class="code-font text-cyan" id="projModalCategory">PROJECT DETAILS</span>
+            <h2 class="modal-title" id="projModalTitle">專案標題</h2>
+          </div>
+          <button type="button" class="modal-close-btn" id="projModalCloseBtn" aria-label="關閉專案詳情">&times;</button>
+        </div>
+
+        <div class="modal-body" id="projModalBody">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="projModalDismissBtn">關閉</button>
+          <a href="#" target="_blank" rel="noopener" class="btn btn-primary" id="projModalLinkBtn">前往專案 / GitHub ↗</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       FLOATING BACK TO TOP BUTTON
+       ========================================================================= -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="回到頁面頂端">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+
+  <!-- Toast Notification (for Copy Email) -->
+  <div class="toast-notification" id="toastNotification" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span class="toast-msg">已成功複製電子郵件地址至剪貼簿！</span>
+  </div>
+
+
+  <!-- Scripts (Load Data source first, then App logic) -->
+  <script src="./data/profile.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

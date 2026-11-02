@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bui Duy Chien (裴維戰) — Resume / CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0F172A;
+      --secondary: #1E293B;
+      --accent: #0284C7;
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+      --bg: #FFFFFF;
+      --card-bg: #F8FAFC;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      color: var(--text-main);
+      background-color: #F1F5F9;
+      padding: 24px 12px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .resume-actions-bar {
+      max-width: 860px;
+      margin: 0 auto 16px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--primary);
+      padding: 12px 20px;
+      border-radius: 8px;
+      color: #FFFFFF;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      border: none;
+      transition: all 0.2s;
+    }
+
+    .btn-print {
+      background-color: var(--accent);
+      color: #FFFFFF;
+    }
+
+    .btn-print:hover {
+      background-color: #0369A1;
+    }
+
+    .btn-back {
+      background-color: #334155;
+      color: #FFFFFF;
+    }
+
+    .btn-back:hover {
+      background-color: #475569;
+    }
+
+    /* Printable Paper Container */
+    .resume-sheet {
+      max-width: 860px;
+      margin: 0 auto;
+      background-color: var(--bg);
+      padding: 40px 48px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+    }
+
+    /* Header */
+    .cv-header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .name-main {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+    }
+
+    .name-sub {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-top: 2px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .tagline {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+      font-weight: 500;
+    }
+
+    .cv-contact-box {
+      text-align: right;
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .cv-contact-box a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* Sections */
+    .cv-section {
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--primary);
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .section-title span.en {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Profile / Summary */
+    .summary-text {
+      font-size: 0.94rem;
+      color: #334155;
+      line-height: 1.7;
+    }
+
+    /* Items */
+    .cv-item {
+      margin-bottom: 14px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+    }
+
+    .item-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--secondary);
+    }
+
+    .item-org {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .item-period {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+    }
+
+    .item-desc-list {
+      list-style-type: disc;
+      padding-left: 20px;
+      font-size: 0.9rem;
+      color: #334155;
+      line-height: 1.6;
+    }
+
+    .item-desc-list li {
+      margin-bottom: 4px;
+    }
+
+    /* Skills Grid */
+    .skills-cv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .skill-cat-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px 14px;
+    }
+
+    .cat-head {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .s-tag {
+      font-size: 0.78rem;
+      font-family: 'JetBrains Mono', monospace;
+      background-color: #FFFFFF;
+      border: 1px solid var(--border);
+      padding: 2px 7px;
+      border-radius: 4px;
+      color: var(--secondary);
+    }
+
+    /* Personal info 2-column table */
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .info-table td {
+      padding: 6px 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .info-table td.label {
+      width: 130px;
+      font-weight: 700;
+      color: var(--text-muted);
+      background-color: var(--card-bg);
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background-color: #FFFFFF;
+        padding: 0;
+      }
+      .resume-actions-bar {
+        display: none !important;
+      }
+      .resume-sheet {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .resume-sheet {
+        padding: 24px 18px;
+      }
+      .cv-contact-box {
+        text-align: left;
+      }
+      .skills-cv-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Bar (Screen Only) -->
+  <div class="resume-actions-bar">
+    <span>裴維戰 (BUI DUY CHIEN) — 個人履歷 (Online Resume)</span>
+    <div style="display: flex; gap: 10px;">
+      <a href="../index.html" class="btn-action btn-back">← 返回作品集</a>
+      <button type="button" class="btn-action btn-print" onclick="window.print()">
+        🖨️ 列印 / 另存為 PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- A4 Printable Paper -->
+  <div class="resume-sheet">
+    <!-- Header -->
+    <header class="cv-header">
+      <div>
+        <h1 class="name-main">裴維戰</h1>
+        <div class="name-sub">BUI DUY CHIEN</div>
+        <p class="tagline">醒吾科技大學 • 資訊科技應用系 (四年級) | 尋求軟體開發 / 實習機會</p>
+      </div>
+
+      <div class="cv-contact-box">
+        <div>國籍：越南 (Vietnam) • 出生：2004/12/17</div>
+        <div>Email: <a href="mailto:duychien17122004@gmail.com">duychien17122004@gmail.com</a></div>
+        <div>GitHub: <a href="https://github.com/duychien0903" target="_blank">github.com/duychien0903</a></div>
+        <div>網站: <a href="https://duychien0903.github.io/student-assignment-portfolio/" target="_blank">成果展示平台</a></div>
+      </div>
+    </header>
+
+    <!-- 1. 個人簡介 -->
+    <section class="cv-section">
+      <h2 class="section-title">個人簡介 <span class="en">/ Professional Summary</span></h2>
+      <p class="summary-text">
+        來自越南、目前於台灣醒吾科技大學就讀資訊科技應用系四年級。具備繁體中文與專業英文溝通能力，專注於現代前端開發、關聯式資料庫設計（MySQL 3NF）、C# 物件導向程式設計與 OpenCV 電腦視覺基礎。在景碩科技實習期間培養出嚴謹之無塵室 SOP 遵循習慣與跨部門機動團隊支援精神，積極將課堂實習轉化為公開作品集，具備高度自主求知慾與解決問題之執行力。
+      </p>
+    </section>
+
+    <!-- 2. 學歷背景 -->
+    <section class="cv-section">
+      <h2 class="section-title">學歷背景 <span class="en">/ Education</span></h2>
+      <div class="cv-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">醒吾科技大學 (Hsing Wu University)</span>
+            <span class="item-org"> • 資訊科技應用系 (大學四年級，在學)</span>
+          </div>
+          <span class="item-period">2023 - 至今 (預計 2027 畢業)</span>
+        </div>
+        <ul class="item-desc-list">
+          <li>核心修習：物件導向程式設計 (C# / Python)、資料庫系統與應用 (MySQL)、響應式網頁前端開發 (HTML5/CSS3/JS)、電腦網路與通訊。</li>
+          <li>自發建置個人全端作業成果庫，將每次實驗與資料庫正規化設計完整保存並公開於 GitHub。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. 工作與實習經歷 -->
+    <section class="cv-section">
+      <h2 class="section-title">工作經歷 <span class="en">/ Work Experience</span></h2>
+      <div class="cv-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">景碩科技股份有限公司 (Kinsus Interconnect Technology)</span>
+            <span class="item-org"> • 生產製造部 實習生 (Plasma 部門)</span>
+          </div>
+          <span class="item-period">實習期間 • 台灣</span>
+        </div>
+        <ul class="item-desc-list">
+          <li>於半導體載板製造環境中遵守嚴格無塵室製程規範，落實機台安全操作與標準作業流程 (SOP)。</li>
+          <li>負責 Plasma (電漿表面處理) 核心工段之機台進出料、參數監控與異常回報。</li>
+          <li>具備高度跨部門支援彈性，主動在人力不足區域協助作業，獲主管肯定具備良好抗壓性與團隊配合度。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4. 專案作品 -->
+    <section class="cv-section">
+      <h2 class="section-title">實作專案成果 <span class="en">/ Projects</span></h2>
+      <div class="cv-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">大專院校個人作業成果展示平台</span>
+            <span class="item-org"> [已完成 • 線上運行中]</span>
+          </div>
+          <span class="item-period">2026</span>
+        </div>
+        <ul class="item-desc-list">
+          <li>採用原生 HTML5/CSS3/JavaScript 打造數據與介面解耦架構，實現即時搜尋、分類篩選、彈窗詳情與全螢幕 Lightbox 截圖放大功能。</li>
+          <li>程式碼全面託管於 GitHub Pages 與 Neocities，零依賴第三方套件。</li>
+        </ul>
+      </div>
+
+      <div class="cv-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">OpenCV 人臉偵測與辨識技術實作</span>
+            <span class="item-org"> [學習實作中]</span>
+          </div>
+          <span class="item-period">2026</span>
+        </div>
+        <ul class="item-desc-list">
+          <li>運用 Python 與 OpenCV 串接網路攝影機即時視訊流，調用 Haar Cascade 分類器實作多尺度即時人臉標記與置信度計算。</li>
+        </ul>
+      </div>
+
+      <div class="cv-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">3D 遊戲開發學習計畫與物理模擬</span>
+            <span class="item-org"> [進行中個人目標]</span>
+          </div>
+          <span class="item-period">2026</span>
+        </div>
+        <ul class="item-desc-list">
+          <li>運用 C# 與 Unity 探索 3D 座標變換、剛體物理 (Rigidbody)、狀態機 (FSM) 與攝影機平滑跟隨演算法。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5. 技能與語言 -->
+    <section class="cv-section">
+      <h2 class="section-title">專業技能與語言 <span class="en">/ Skills &amp; Languages</span></h2>
+      <div class="skills-cv-grid">
+        <div class="skill-cat-card">
+          <div class="cat-head">程式語言</div>
+          <div class="skill-tags">
+            <span class="s-tag">C# (學習中)</span>
+            <span class="s-tag">Python (學習中)</span>
+            <span class="s-tag">HTML5 / CSS3</span>
+            <span class="s-tag">JavaScript (ES6+)</span>
+          </div>
+        </div>
+
+        <div class="skill-cat-card">
+          <div class="cat-head">工具與環境</div>
+          <div class="skill-tags">
+            <span class="s-tag">VS Code</span>
+            <span class="s-tag">Git / GitHub</span>
+            <span class="s-tag">OpenCV</span>
+            <span class="s-tag">MySQL Workbench</span>
+          </div>
+        </div>
+
+        <div class="skill-cat-card">
+          <div class="cat-head">語言能力</div>
+          <div class="skill-tags">
+            <span class="s-tag">越南語 (母語)</span>
+            <span class="s-tag">繁體中文 (日常/職場)</span>
+            <span class="s-tag">英文 (技術閱讀)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
